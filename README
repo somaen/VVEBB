@@ -1,0 +1,19 @@
+System for handling assignments.
+Mainly developed for use at NTNU.
+
+Aiming for the following features:
+- Users and user login (via innsida at NTNU)
+- Publishing assignments, attaching files to publications
+- Submitting assignments, attaching files to submissions
+- Assessing assignments
+
+Aiming to replace the following systems (among others):
+- it's learning (the delivery part)
+- http://www.idi.ntnu.no/emner/tdt4165/?page=deliver
+- http://selje.idi.ntnu.no:1234/tdt4120/
+- http://itgk.idi.ntnu.no/oving/
+- http://www.math.ntnu.no/ovsys/?db=MA1101-H2011
+
+Suggestions:
+- Permissions for files / assignments
+- Partitioning students into groups (GUI)
