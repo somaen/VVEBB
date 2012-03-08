@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\title{VVEBB \\ Virkelig Virkelig Enkel BrukerBase \\ Utkast til utkast til plan \\ forekjem kun i nynorsk utgåve}
+\date{}
+\begin{document}
+  \maketitle 
+  
+  \begin{abstract}
+  I dagens læringssituasjon er det viktig å nytte effektive verktøy for å handtere informasjon
+  og innleveringar mellom student og fagstab. Det er ein kjensgjerning at det i dag ikkje finst
+  nokon slike verktøy som er dekjande for høgare utdanning. VVEBB søkjar å fylle dette holet, ved
+  å tilby eit øvings- og informasjonssystem berekna på fag med opptil hundrevis av studentar, med
+  varierande grad av vurderingsformar og informasjonsflyt.
+  \end{abstract}
+  
+  \section{Kvifor \"VVEBB\"}
+  Verkeleg Verkeleg Enkel BrukarBase, har fått namnet eine og aleine av di at når ein forelesar i
+  dag sei at "Eg legg det ut på \[LMS-løysing\]". I denne samanheng er det viktig å nemne at uttala
+  av VVEBB skal vere "VEBB", nokon nærare forklaring er ikkje naudsamt.
+  
+  \section{Rationale}
+  I dag nyttar NTNU eit læringssystem som er retta opp mot vidaregåande opplæring, og dermed har ein
+  del designval som gjer god meining om elevgruppane er på om lag 20 studentar per gruppe/fag, ved
+  Norges Teknisk Naturvitskaplege Universitet har fleire fag gjerne godt over 20 gangar så mange studentar,
+  noko som gjer dagens system litt uhandterbart til formålet. Enkelte fag har av denne grunn fortsatt
+  eigne heimesnekra løysingar for å handtere elevgruppar og øvingsgodkjenning/innlevering, VVEBB søkjar
+  ikkje å konkurere på vilkåra/markedsgruppa dagens LMS-system er retta mot, men derimot søkjar VVEBB å
+  vere eit verktyg direkte retta opp mot universitet/høgskular. VVEBB skal altså vere eit verktyg som er
+  i stand til å erstatte dagens heimesnekre løysingar, nettopp av di at vi har sett på KVIFOR dei heimesnikra
+  løysingane ikkje har erstatta det felles LMS-systemet som NTNU i dag nyttar, og forsøkt å samordne eit
+  system som skal dekje behova.
+  
+  
+  \section{Usecases}
+  Til VVEBB har vi valgt å basere øvingssystemet på tre øvingssystemar vi opplev som rimeleg velfungerande
+  ved NTNU i dag:
+  \begin{itemize}
+  \item OvSys i TDT4120 - Algoritmer og Datastrukturer, eit system som lar eleven svara på multiple-choice oppgåver,
+  og levere inn kode som vert køyrd på serveren og verifisert mot testdata, ein viktig faktor er sikkerheit, og augeblikkelege resultatar for godkjenning.
+  \item Øvingssystem i Matematikk - Eit nokså enkelt system for å halde orden på papirøvingar som har vorte godkjend, i dag får ein heilt enkelt ein mail ved forespørsel, som seier kva øvingar en har fått godkjend og ikkje. Ein viktig faktor her er støtte for godkjenning av øvingar studenten ikkje har levert digitalt på nokon som helst måte, samt at det skal være lett og oversiktlig for studenten å finne ut kva som er godkjent (og forøvrig også for studassane å halde liknande oversikt)
+  \item Øvingssystem i TDT4165 - Programmeringsspråk - har støtte for opplasting av programkode og kommentarar, som rettast manuelt av studassar, viktige faktorar her er gode og oversiktlige løysingar som let studassane halde oversikt over studentar som held på å ende i den kjedelege situasjonen det er å ikkje få gå opp til eksamen.
+  \item Øvingssystem i TDT4110/TDT4115 - IT GK - har ei løysing for å fordele studentar på gruppar basert på kva linje dei går på, eit viktig punkt her er nett moglegheiten til å vite kva linje studentar går på (uavhengig av kva fag systemet nyttast i), systemet har også moglegheitar til å fiske fram automatisk dei studentane som har færre enn x godkjende øvingar.
+  \end{itemize}
+  
+  \section{Ting som er gjort}
+  Val av språk er gjort, Java, noko testkode for ein base er gjort. (spør andreao)
+  Eit github-repos er satt opp. (spør torjehoa om adgang, eller fork sjølv)
+  
+  \section{Kravspesifikasjon}
+  TODO
+  
+  \section{Arbeidsplan}
+  Overordna arbeidsplan (nokre av desse punkta kan gjerne gjerast i parallell):
+  \begin{enumerate}
+  \item Grunnmål: reimplementer eit system som dekjer behova til TDT4165, av di at det er et lett og handterleg system, og skulle vise eventuelle tidlege svakhetar i plana vår.
+  \item Angrip problemet ovanifrå og ned, introduser eit trivielt påloggingssystem (det er ikkje ein gong naudsamt med passord på dette stadiet)
+  \item Implementer støtte for rollar, studass/student/faglærar/undass/vitass, ta gjerne færre av disse, men ta høyde for at vi gjerne vil ha fleire i framtida
+  \item Vurder skalerbarheten av denne løysinga, revider eventuelle svakhetar, og angrip problemet "TDT4110/TDT4115".
+  \item Vurder brukbarheten, forespør gjerne fagstaben i dei to overnevnte faga om eventuell input, (vi har eigentleg ikkje noko behov for å diskutere med dei før dette punktet, sidan orsaka til at vi har jobba mot dei ikkje var det å erstatte deira systemar over natta, men heller det å sikre oss eit skalerbart system)
+  \item Ta kontakt med ITEA for å få ordning på Innsida SSO, implementer denne.
+  \item DOKUMENTER SYSTEMET GRUNDIG.
+  \item Forespør fagstaben i eit fag som i dag nyttar eit heimesnekra system som vi vet vi kan tilby noko betre enn, og høyr om dei er interesserte i å ta VVEBB i bruk.
+  \item Hald dialogen open med fagstaben, og forsøk å fylle inn eventuelle hol
+  \item Implementer Løysing for TDT4120 eller Øvingssystem i Matematikk
+  \item Legg inn anbud i anbudsrunden om LMS ved NTNU
+  \item ...
+  \item Profit  
+  
+  \section{ÅTVARING: Alt herifrå og ut er notatar og fjas:}
+  
+  \section{Kva må gjerast (eller VVEBB-raider)}
+  Dette er ei liste over arbeidsoppgåver som treng nærare beskriving i dette dokumentet, og nokon til å ta seg av dei, eksamensperioden er særs optimal for å arbeide med desse oppgåvane
+  \begin{itemize}
+  \item Vi treng ein DOM.
+  \item Vi treng ein detaljert faktisk usecase-liste.
+  \item Vi treng ein islandskspråkleg utgåve av denne rapporten.
+  \item Vi treng ein faktisk web-frontend.
+  \item Vi treng Innsida-SSO-nykjel, og kode for å autentisere oss via denne.
+  \item Vi treng nokon som er villige til å ta systemet vårt i bruk, vurder å be TDT4165 pent, om vi klarar å reimplementere deira funksjonalitet som ein første milestone.
+  \item Vi treng database-dokumentasjon
+  \end{itemize}
+\end{document}
